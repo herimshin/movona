@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		07F5204E29A795D700EF51D8 /* MovonaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5204D29A795D700EF51D8 /* MovonaApp.swift */; };
-		07F5205029A795D700EF51D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5204F29A795D700EF51D8 /* ContentView.swift */; };
 		07F5205229A795D700EF51D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F5205129A795D700EF51D8 /* Assets.xcassets */; };
 		07F5205529A795D700EF51D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F5205429A795D700EF51D8 /* Preview Assets.xcassets */; };
 		07F5205729A795D700EF51D8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5205629A795D700EF51D8 /* Persistence.swift */; };
@@ -16,6 +15,10 @@
 		07F5206529A795D700EF51D8 /* MovonaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5206429A795D700EF51D8 /* MovonaTests.swift */; };
 		07F5206F29A795D700EF51D8 /* MovonaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5206E29A795D700EF51D8 /* MovonaUITests.swift */; };
 		07F5207129A795D700EF51D8 /* MovonaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5207029A795D700EF51D8 /* MovonaUITestsLaunchTests.swift */; };
+		07F5207E29A7965B00EF51D8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5207D29A7965B00EF51D8 /* HomeView.swift */; };
+		07F5208229A7982E00EF51D8 /* CardStack in Frameworks */ = {isa = PBXBuildFile; productRef = 07F5208129A7982E00EF51D8 /* CardStack */; };
+		07F5208429A79BD200EF51D8 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5208329A79BD200EF51D8 /* ListView.swift */; };
+		07F5208A29A79F0000EF51D8 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5208929A79F0000EF51D8 /* TabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,6 @@
 /* Begin PBXFileReference section */
 		07F5204A29A795D700EF51D8 /* Movona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movona.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F5204D29A795D700EF51D8 /* MovonaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovonaApp.swift; sourceTree = "<group>"; };
-		07F5204F29A795D700EF51D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		07F5205129A795D700EF51D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07F5205429A795D700EF51D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		07F5205629A795D700EF51D8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -49,6 +51,9 @@
 		07F5206A29A795D700EF51D8 /* MovonaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovonaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F5206E29A795D700EF51D8 /* MovonaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovonaUITests.swift; sourceTree = "<group>"; };
 		07F5207029A795D700EF51D8 /* MovonaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovonaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		07F5207D29A7965B00EF51D8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		07F5208329A79BD200EF51D8 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		07F5208929A79F0000EF51D8 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F5208229A7982E00EF51D8 /* CardStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				07F5204D29A795D700EF51D8 /* MovonaApp.swift */,
-				07F5204F29A795D700EF51D8 /* ContentView.swift */,
+				07F5208929A79F0000EF51D8 /* TabBarView.swift */,
+				07F5207D29A7965B00EF51D8 /* HomeView.swift */,
+				07F5208329A79BD200EF51D8 /* ListView.swift */,
 				07F5205129A795D700EF51D8 /* Assets.xcassets */,
 				07F5205629A795D700EF51D8 /* Persistence.swift */,
 				07F5205B29A795D700EF51D8 /* Info.plist */,
@@ -151,6 +159,9 @@
 			dependencies = (
 			);
 			name = Movona;
+			packageProductDependencies = (
+				07F5208129A7982E00EF51D8 /* CardStack */,
+			);
 			productName = Movona;
 			productReference = 07F5204A29A795D700EF51D8 /* Movona.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +234,9 @@
 				Base,
 			);
 			mainGroup = 07F5204129A795D700EF51D8;
+			packageReferences = (
+				07F5208029A7982E00EF51D8 /* XCRemoteSwiftPackageReference "CardStack" */,
+			);
 			productRefGroup = 07F5204B29A795D700EF51D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,8 +280,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F5205729A795D700EF51D8 /* Persistence.swift in Sources */,
-				07F5205029A795D700EF51D8 /* ContentView.swift in Sources */,
+				07F5207E29A7965B00EF51D8 /* HomeView.swift in Sources */,
+				07F5208429A79BD200EF51D8 /* ListView.swift in Sources */,
 				07F5204E29A795D700EF51D8 /* MovonaApp.swift in Sources */,
+				07F5208A29A79F0000EF51D8 /* TabBarView.swift in Sources */,
 				07F5205A29A795D700EF51D8 /* Movona.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +609,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		07F5208029A7982E00EF51D8 /* XCRemoteSwiftPackageReference "CardStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/notsobigcompany/CardStack";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		07F5208129A7982E00EF51D8 /* CardStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07F5208029A7982E00EF51D8 /* XCRemoteSwiftPackageReference "CardStack" */;
+			productName = CardStack;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		07F5205829A795D700EF51D8 /* Movona.xcdatamodeld */ = {
