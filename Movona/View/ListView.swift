@@ -10,45 +10,46 @@ import SwiftUI
 struct ListView: View {
     
     @State var showAddView : Bool = false
-    @State var movies: [Movie] = [
-        Movie(title: "About Time", genre: "Romance", isWatched: true),
-        Movie(title: "Amélie", genre: "Drama", isWatched: true),
-        Movie(title: "Mononokehime", genre: "Animation", isWatched: false),
-        Movie(title: "Grand Budapest Hotel", genre: "Drama", isWatched: false)
-    ]
-    
+    @StateObject var movieViewModel = MovieViewModel()
+     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(movies) { movie in
-                    HStack {
-                        Rectangle()
-                            .foregroundColor(.blue)
-                            .frame(width: 60, height: 60)
-                            .cornerRadius(5)
-                            .overlay(
-                                Image(systemName: "popcorn.fill")
-                                    .foregroundColor(.white)
-                            )
-                        VStack(alignment: .leading) {
-                            Text(movie.title)
-                                .font(.title2)
-                            Text(movie.genre)
-                                .font(.callout)
-                                .foregroundColor(.gray)
-                        }
-                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
-                        Spacer()
-                        
-                        if movie.isWatched == true {
-                            Image(systemName: "checkmark.circle.fill")
+                ForEach(movieViewModel.movieArray) { movie in
+                    NavigationLink {
+                        MovieDetailsView(tappedMovieTitle: movie.title, tappedMovieGenre: movie.genre, tappedMovieisWatched: movie.isWatched)
+                    } label: {
+                        HStack {
+                            Rectangle()
                                 .foregroundColor(.blue)
+                                .frame(width: 60, height: 60)
+                                .cornerRadius(5)
+                                .overlay(
+                                    Image(systemName: "popcorn.fill")
+                                        .foregroundColor(.white)
+                                )
+                            VStack(alignment: .leading) {
+                                Text(movie.title)
+                                    .font(.title2)
+                                Text(movie.genre)
+                                    .font(.callout)
+                                    .foregroundColor(.gray)
+                            }
+                            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                            Spacer()
+                            
+                            if movie.isWatched == true {
+                                Image(systemName: "checkmark.circle.fill")
+                                    .foregroundColor(.blue)
+                            
+                            } // isWatched
+                            
+                        }
                         
-                        } // isWatched
-                        
+                        // Movie list row 1
                     }
+
                     
-                    // Movie list row 1
                 }
                 
             }

@@ -9,8 +9,9 @@ import SwiftUI
 import CardStack
 
 struct HomeView: View {
-    let movies = ["About Time", "Eternal Sunshine", "Amelie", "Mononokehime", "Sense and Sensibility"]
-    @State var movieShuffled = "About Time"
+    @StateObject var movieViewModel = MovieViewModel()
+    @State var shuffledMovieTitle = "About Time"
+    @State var shuffledMovieGenre = "Romance"
     @State var isChosen = false
     
 
@@ -25,10 +26,9 @@ struct HomeView: View {
                 Spacer()
                 
                 VStack(spacing: 4) {
-                    Text("\(movieShuffled)")
+                    Text("\(shuffledMovieTitle)")
                         .font(.title2)
-                    Text("1999")
-                    Text("Director's name")
+                    Text("\(shuffledMovieGenre)")
                 } // movie info
                 
             
@@ -49,10 +49,9 @@ struct HomeView: View {
                 
                 HStack {
                     Button {
-                        let movieprecede = movieShuffled
-                        movieShuffled = movies.randomElement()!
-                        print("Movie shuffeld: ", movieprecede, "->", movieShuffled)
-                        
+                        let shuffledResult = movieViewModel.shuffleMovie()
+                        shuffledMovieTitle = shuffledResult.title
+                        shuffledMovieGenre = shuffledResult.genre
                     } label: {
                         Label("Shuffle", systemImage: "shuffle")
                     }

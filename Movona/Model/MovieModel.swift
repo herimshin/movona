@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Movie: Identifiable {
+struct MovieModel: Identifiable {
     let id: String = UUID().uuidString
     let title: String
     let genre: String
