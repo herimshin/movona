@@ -14,24 +14,25 @@ class MovieViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     
     init() {
-        getMovie()
+        movieArray = [
+            MovieModel(title: "About Time", genre: "Romance", isWatched: false),
+            MovieModel(title: "Eternal Sunshine", genre: "Romance", isWatched: false),
+            MovieModel(title: "Amelie", genre: "Drama", isWatched: false),
+            MovieModel(title: "Mononokehime", genre: "Animation", isWatched: true),
+            MovieModel(title: "Wednesday", genre: "Comedy", isWatched: false)
+            ]
     }
     
-    func getMovie() {
-        let movie0 = MovieModel(title: "About Time", genre: "Romance", isWatched: false)
-        let movie1 = MovieModel(title: "Eternal Sunshine", genre: "Romance", isWatched: false)
-        let movie2 = MovieModel(title: "Amelie", genre: "Drama", isWatched: false)
-        let movie3 = MovieModel(title: "Mononokehime", genre: "Animation", isWatched: true)
-        let movie4 = MovieModel(title: "Wednesday", genre: "Comedy", isWatched: false)
-
-        
-        movieArray.append(movie0)
-        movieArray.append(movie1)
-        movieArray.append(movie2)
-        movieArray.append(movie3)
-        movieArray.append(movie4)
+    func addMovie(movie: MovieModel) {
+        print(movieArray.count)
+        movieArray.append(movie)
+        print(movieArray.count)
 
     }
+    
+    func removeMovie(indexAt : IndexSet){
+            movieArray.remove(atOffsets: indexAt)
+        }
     
     func shuffleMovie() -> MovieModel {
         let shuffledMovie: MovieModel = movieArray.randomElement()!

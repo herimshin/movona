@@ -10,7 +10,7 @@ import SwiftUI
 struct ListView: View {
     
     @State var showAddView : Bool = false
-    @StateObject var movieViewModel = MovieViewModel()
+    @ObservedObject var movieViewModel = MovieViewModel()
      
     var body: some View {
         NavigationStack {
@@ -51,6 +51,9 @@ struct ListView: View {
 
                     
                 }
+                .onDelete(perform: {
+                                movieViewModel.removeMovie(indexAt: $0)
+                            })
                 
             }
             .listStyle(.plain)

@@ -9,7 +9,7 @@ import SwiftUI
 import CardStack
 
 struct HomeView: View {
-    @StateObject var movieViewModel = MovieViewModel()
+    @ObservedObject var movieViewModel = MovieViewModel()
     @State var shuffledMovieTitle = "About Time"
     @State var shuffledMovieGenre = "Romance"
     @State var isChosen = false
