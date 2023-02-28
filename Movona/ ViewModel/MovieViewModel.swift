@@ -14,13 +14,18 @@ class MovieViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     
     init() {
-        movieArray = [
+            getMovies()
+    }
+    
+    func getMovies() {
+        let initMovies = [
             MovieModel(title: "About Time", genre: "Romance", isWatched: false),
             MovieModel(title: "Eternal Sunshine", genre: "Romance", isWatched: false),
             MovieModel(title: "Amelie", genre: "Drama", isWatched: false),
             MovieModel(title: "Mononokehime", genre: "Animation", isWatched: true),
             MovieModel(title: "Wednesday", genre: "Comedy", isWatched: false)
-            ]
+        ]
+        movieArray.append(contentsOf: initMovies)
     }
     
     func addMovie(movie: MovieModel) {
@@ -30,13 +35,19 @@ class MovieViewModel: ObservableObject {
 
     }
     
-    func removeMovie(indexAt : IndexSet){
+    func deleteMovie(indexAt : IndexSet){
             movieArray.remove(atOffsets: indexAt)
         }
+    
+    func moveMovie(from: IndexSet, to: Int) {
+        movieArray.move(fromOffsets: from, toOffset: to)
+    }
     
     func shuffleMovie() -> MovieModel {
         let shuffledMovie: MovieModel = movieArray.randomElement()!
         return shuffledMovie
     }
+    
+    
     
 }

@@ -9,7 +9,7 @@ import SwiftUI
 import CardStack
 
 struct HomeView: View {
-    @ObservedObject var movieViewModel = MovieViewModel()
+    @EnvironmentObject var movieViewModel: MovieViewModel
     @State var shuffledMovieTitle = "About Time"
     @State var shuffledMovieGenre = "Romance"
     @State var isChosen = false
@@ -58,8 +58,9 @@ struct HomeView: View {
                     .frame(width: geometry.size.width * 0.3, height: geometry.size.width * 0.1)
                     .padding(10)
                     .foregroundColor(.white)
-                    .background(.blue)
+                    .background(movieViewModel.movieArray.isEmpty ? .gray : .blue)
                     .cornerRadius(10)
+                    .disabled(movieViewModel.movieArray.isEmpty)
                     
                     Button {
                         isChosen.toggle()
@@ -67,10 +68,11 @@ struct HomeView: View {
                     } label: {
                         Label("Choose", systemImage: "popcorn.fill")
                     }
+                    .disabled(movieViewModel.movieArray.isEmpty)
                     .frame(width: geometry.size.width * 0.3, height: geometry.size.width * 0.1)
                     .padding(10)
                     .foregroundColor(.white)
-                    .background(.pink)
+                    .background(movieViewModel.movieArray.isEmpty ? .gray : .pink)
                     .cornerRadius(10)
                     .alert("Enjoy your movie!", isPresented: $isChosen) {
                                 Button("OK", role: .cancel) { }

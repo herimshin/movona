@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		074E349E29AD44F300AE7738 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E349D29AD44F300AE7738 /* ListRowView.swift */; };
 		0767752A29A90F4600BD1B4C /* MovieAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767752929A90F4600BD1B4C /* MovieAddView.swift */; };
 		0767752D29AA7BE400BD1B4C /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767752C29AA7BE400BD1B4C /* MovieModel.swift */; };
 		0767753E29ACEE0C00BD1B4C /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767753D29ACEE0C00BD1B4C /* MovieViewModel.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		074E349D29AD44F300AE7738 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		0767752929A90F4600BD1B4C /* MovieAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAddView.swift; sourceTree = "<group>"; };
 		0767752C29AA7BE400BD1B4C /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		0767753D29ACEE0C00BD1B4C /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				07F5208929A79F0000EF51D8 /* TabBarView.swift */,
 				07F5207D29A7965B00EF51D8 /* HomeView.swift */,
 				07F5208329A79BD200EF51D8 /* ListView.swift */,
+				074E349D29AD44F300AE7738 /* ListRowView.swift */,
 				0767752929A90F4600BD1B4C /* MovieAddView.swift */,
 				0767753F29ACF0C900BD1B4C /* MovieDetailsView.swift */,
 			);
@@ -323,6 +326,7 @@
 				07F5204E29A795D700EF51D8 /* MovonaApp.swift in Sources */,
 				0767753E29ACEE0C00BD1B4C /* MovieViewModel.swift in Sources */,
 				07F5208A29A79F0000EF51D8 /* TabBarView.swift in Sources */,
+				074E349E29AD44F300AE7738 /* ListRowView.swift in Sources */,
 				0767752A29A90F4600BD1B4C /* MovieAddView.swift in Sources */,
 				07F5205A29A795D700EF51D8 /* Movona.xcdatamodeld in Sources */,
 			);

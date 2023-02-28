@@ -10,7 +10,8 @@ import SwiftUI
 struct ListView: View {
     
     @State var showAddView : Bool = false
-    @ObservedObject var movieViewModel = MovieViewModel()
+    @EnvironmentObject var movieViewModel: MovieViewModel
+    
      
     var body: some View {
         NavigationStack {
@@ -18,48 +19,24 @@ struct ListView: View {
                 ForEach(movieViewModel.movieArray) { movie in
                     NavigationLink {
                         MovieDetailsView(tappedMovieTitle: movie.title, tappedMovieGenre: movie.genre, tappedMovieisWatched: movie.isWatched)
+
                     } label: {
-                        HStack {
-                            Rectangle()
-                                .foregroundColor(.blue)
-                                .frame(width: 60, height: 60)
-                                .cornerRadius(5)
-                                .overlay(
-                                    Image(systemName: "popcorn.fill")
-                                        .foregroundColor(.white)
-                                )
-                            VStack(alignment: .leading) {
-                                Text(movie.title)
-                                    .font(.title2)
-                                Text(movie.genre)
-                                    .font(.callout)
-                                    .foregroundColor(.gray)
-                            }
-                            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
-                            Spacer()
-                            
-                            if movie.isWatched == true {
-                                Image(systemName: "checkmark.circle.fill")
-                                    .foregroundColor(.blue)
-                            
-                            } // isWatched
-                            
-                        }
-                        
-                        // Movie list row 1
+                        ListRowView(movie: movie)
                     }
 
                     
                 }
                 .onDelete(perform: {
-                                movieViewModel.removeMovie(indexAt: $0)
+                                movieViewModel.deleteMovie(indexAt: $0)
                             })
+                .onMove(perform: movieViewModel.moveMovie(from:to:))
                 
             }
             .listStyle(.plain)
             .navigationTitle("Movie List")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
+                leading: EditButton(),
                 trailing: Button {
                     showAddView.toggle()
                     print("showAddview is toggled", showAddView)
@@ -72,8 +49,7 @@ struct ListView: View {
                     .fullScreenCover(isPresented: $showAddView) {
                         MovieAddView()
                         
-                    }
-            )
+                    })
         }
     }
 }

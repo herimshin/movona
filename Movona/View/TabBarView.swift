@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TabBarView: View {
+    @EnvironmentObject var movieViewModel: MovieViewModel
+
     var body: some View {
         TabView {
                     HomeView()
@@ -18,6 +20,7 @@ struct TabBarView: View {
                     ListView()
                         .tabItem {
                             Label("List", systemImage: "list.dash")
+
                         }
                 }    }
 }
