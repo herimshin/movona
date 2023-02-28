@@ -39,7 +39,6 @@ struct ListView: View {
                 leading: EditButton(),
                 trailing: Button {
                     showAddView.toggle()
-                    print("showAddview is toggled", showAddView)
                     
                 } label: {
                     Image(systemName: "plus")
