@@ -1,56 +1,57 @@
 //
-//  ListRow.swift
+//  ListRowView.swift
 //  Movona
 //
-//  Created by 신혜림 on 2023/02/27.
+//  Created by 신혜림 on 2023/03/02.
 //
 
 import SwiftUI
 
 struct ListRowView: View {
+    @ObservedObject var movie: Movie
+
     
-    let movie: MovieModel
     
     var body: some View {
         HStack {
-            Rectangle()
-                .opacity(movie.isWatched ? 1 : 0.7)
-                .foregroundColor(.blue)
-                .frame(width: 60, height: 60)
-                .cornerRadius(5)
-                .overlay(
-                    Image(systemName: "popcorn.fill")
-                        .foregroundColor(.white)
-                )
-            VStack(alignment: .leading) {
-                Text(movie.title)
-                    .font(.title2)
-                    .foregroundColor(movie.isWatched ? .primary : .secondary)
-                Text(movie.genre)
-                    .font(.callout)
+            HStack {
+                Rectangle()
+                    .frame(width: 50, height: 50)
+                    .cornerRadius(5)
+                    .padding(.horizontal, 10)
+                    .foregroundColor(.yellow)
+                    .overlay(
+                    Image(systemName: "popcorn")
+                        .font(.title2))
+                VStack(alignment: .leading) {
+                    Text(movie.title ?? "")
+                        .font(.headline)
+                    Text(movie.genre ?? "")
+                        .font(.subheadline)
+                    
+                }
+            }
+            Spacer()
+            if movie.isWatched {
+                Image(systemName: "eye.fill")
                     .foregroundColor(.gray)
             }
-            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
-            Spacer()
             
         }
-        
-        // Movie list row 1
-        
+        .padding(.vertical, 8)
+        .contentShape(Rectangle())
     }
 }
 
 struct ListRowView_Previews: PreviewProvider {
-    
-    static var movieRow1 = MovieModel(title: "A", genre: "Horror", isWatched: true)
-    static var movieRow2 = MovieModel(title: "B", genre: "Comedy", isWatched: false)
-
-    static var previews: some View {
-            ListRowView(movie: movieRow1)
-            .previewLayout(.sizeThatFits)
-            ListRowView(movie: movieRow2)
-            .previewLayout(.sizeThatFits)
-
-
-    }
+    static let context = DataController().container.viewContext
+        static var previews: some View {
+            let movie = Movie(context: context)
+            movie.title = "About Time"
+            movie.genre = "Romance"
+            movie.isWatched = false
+            
+            return ListRowView(movie: movie)
+                .previewLayout(.sizeThatFits)
+        }
 }

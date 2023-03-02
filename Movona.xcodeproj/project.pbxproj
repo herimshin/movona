@@ -7,23 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		074E349E29AD44F300AE7738 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E349D29AD44F300AE7738 /* ListRowView.swift */; };
-		0767752A29A90F4600BD1B4C /* MovieAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767752929A90F4600BD1B4C /* MovieAddView.swift */; };
-		0767752D29AA7BE400BD1B4C /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767752C29AA7BE400BD1B4C /* MovieModel.swift */; };
-		0767753E29ACEE0C00BD1B4C /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767753D29ACEE0C00BD1B4C /* MovieViewModel.swift */; };
-		0767754029ACF0C900BD1B4C /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767753F29ACF0C900BD1B4C /* MovieDetailsView.swift */; };
+		076BB31929B14575002C58AC /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076BB31829B14575002C58AC /* ListRowView.swift */; };
 		07F5204E29A795D700EF51D8 /* MovonaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5204D29A795D700EF51D8 /* MovonaApp.swift */; };
 		07F5205229A795D700EF51D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F5205129A795D700EF51D8 /* Assets.xcassets */; };
 		07F5205529A795D700EF51D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F5205429A795D700EF51D8 /* Preview Assets.xcassets */; };
-		07F5205729A795D700EF51D8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5205629A795D700EF51D8 /* Persistence.swift */; };
 		07F5205A29A795D700EF51D8 /* Movona.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07F5205829A795D700EF51D8 /* Movona.xcdatamodeld */; };
 		07F5206529A795D700EF51D8 /* MovonaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5206429A795D700EF51D8 /* MovonaTests.swift */; };
 		07F5206F29A795D700EF51D8 /* MovonaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5206E29A795D700EF51D8 /* MovonaUITests.swift */; };
 		07F5207129A795D700EF51D8 /* MovonaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5207029A795D700EF51D8 /* MovonaUITestsLaunchTests.swift */; };
-		07F5207E29A7965B00EF51D8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5207D29A7965B00EF51D8 /* HomeView.swift */; };
 		07F5208229A7982E00EF51D8 /* CardStack in Frameworks */ = {isa = PBXBuildFile; productRef = 07F5208129A7982E00EF51D8 /* CardStack */; };
-		07F5208429A79BD200EF51D8 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5208329A79BD200EF51D8 /* ListView.swift */; };
-		07F5208A29A79F0000EF51D8 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5208929A79F0000EF51D8 /* TabBarView.swift */; };
+		07F96D1329B1332300B4F914 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F96D1229B1332300B4F914 /* DataController.swift */; };
+		07F96D1829B1342400B4F914 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F96D1729B1342400B4F914 /* ListView.swift */; };
+		07F96D1B29B1347B00B4F914 /* AddMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F96D1A29B1347B00B4F914 /* AddMovieView.swift */; };
+		07F96D1D29B1398500B4F914 /* ShuffleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F96D1C29B1398500B4F914 /* ShuffleView.swift */; };
+		07F96D1F29B13E1B00B4F914 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F96D1E29B13E1B00B4F914 /* TabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,16 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		074E349D29AD44F300AE7738 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
-		0767752929A90F4600BD1B4C /* MovieAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAddView.swift; sourceTree = "<group>"; };
-		0767752C29AA7BE400BD1B4C /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
-		0767753D29ACEE0C00BD1B4C /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
-		0767753F29ACF0C900BD1B4C /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
+		076BB31829B14575002C58AC /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		07F5204A29A795D700EF51D8 /* Movona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movona.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F5204D29A795D700EF51D8 /* MovonaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovonaApp.swift; sourceTree = "<group>"; };
 		07F5205129A795D700EF51D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07F5205429A795D700EF51D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		07F5205629A795D700EF51D8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		07F5205929A795D700EF51D8 /* Movona.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Movona.xcdatamodel; sourceTree = "<group>"; };
 		07F5205B29A795D700EF51D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07F5206029A795D700EF51D8 /* MovonaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovonaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,9 +53,11 @@
 		07F5206A29A795D700EF51D8 /* MovonaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovonaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F5206E29A795D700EF51D8 /* MovonaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovonaUITests.swift; sourceTree = "<group>"; };
 		07F5207029A795D700EF51D8 /* MovonaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovonaUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		07F5207D29A7965B00EF51D8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		07F5208329A79BD200EF51D8 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		07F5208929A79F0000EF51D8 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		07F96D1229B1332300B4F914 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		07F96D1729B1342400B4F914 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		07F96D1A29B1347B00B4F914 /* AddMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieView.swift; sourceTree = "<group>"; };
+		07F96D1C29B1398500B4F914 /* ShuffleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleView.swift; sourceTree = "<group>"; };
+		07F96D1E29B13E1B00B4F914 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,30 +89,13 @@
 		0767752829A90F3500BD1B4C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				07F5208929A79F0000EF51D8 /* TabBarView.swift */,
-				07F5207D29A7965B00EF51D8 /* HomeView.swift */,
-				07F5208329A79BD200EF51D8 /* ListView.swift */,
-				074E349D29AD44F300AE7738 /* ListRowView.swift */,
-				0767752929A90F4600BD1B4C /* MovieAddView.swift */,
-				0767753F29ACF0C900BD1B4C /* MovieDetailsView.swift */,
+				07F96D1E29B13E1B00B4F914 /* TabBarView.swift */,
+				07F96D1729B1342400B4F914 /* ListView.swift */,
+				076BB31829B14575002C58AC /* ListRowView.swift */,
+				07F96D1A29B1347B00B4F914 /* AddMovieView.swift */,
+				07F96D1C29B1398500B4F914 /* ShuffleView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		0767752B29AA7BC000BD1B4C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				0767752C29AA7BE400BD1B4C /* MovieModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0767753C29ACEDFE00BD1B4C /*  ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				0767753D29ACEE0C00BD1B4C /* MovieViewModel.swift */,
-			);
-			path = " ViewModel";
 			sourceTree = "<group>";
 		};
 		07F5204129A795D700EF51D8 = {
@@ -144,14 +121,11 @@
 		07F5204C29A795D700EF51D8 /* Movona */ = {
 			isa = PBXGroup;
 			children = (
-				0767753C29ACEDFE00BD1B4C /*  ViewModel */,
-				0767752B29AA7BC000BD1B4C /* Model */,
+				07F96D1929B1346400B4F914 /* Data */,
 				0767752829A90F3500BD1B4C /* View */,
 				07F5204D29A795D700EF51D8 /* MovonaApp.swift */,
 				07F5205129A795D700EF51D8 /* Assets.xcassets */,
-				07F5205629A795D700EF51D8 /* Persistence.swift */,
 				07F5205B29A795D700EF51D8 /* Info.plist */,
-				07F5205829A795D700EF51D8 /* Movona.xcdatamodeld */,
 				07F5205329A795D700EF51D8 /* Preview Content */,
 			);
 			path = Movona;
@@ -180,6 +154,15 @@
 				07F5207029A795D700EF51D8 /* MovonaUITestsLaunchTests.swift */,
 			);
 			path = MovonaUITests;
+			sourceTree = "<group>";
+		};
+		07F96D1929B1346400B4F914 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				07F5205829A795D700EF51D8 /* Movona.xcdatamodeld */,
+				07F96D1229B1332300B4F914 /* DataController.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,17 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07F5205729A795D700EF51D8 /* Persistence.swift in Sources */,
-				07F5207E29A7965B00EF51D8 /* HomeView.swift in Sources */,
-				07F5208429A79BD200EF51D8 /* ListView.swift in Sources */,
-				0767752D29AA7BE400BD1B4C /* MovieModel.swift in Sources */,
-				0767754029ACF0C900BD1B4C /* MovieDetailsView.swift in Sources */,
+				07F96D1D29B1398500B4F914 /* ShuffleView.swift in Sources */,
 				07F5204E29A795D700EF51D8 /* MovonaApp.swift in Sources */,
-				0767753E29ACEE0C00BD1B4C /* MovieViewModel.swift in Sources */,
-				07F5208A29A79F0000EF51D8 /* TabBarView.swift in Sources */,
-				074E349E29AD44F300AE7738 /* ListRowView.swift in Sources */,
-				0767752A29A90F4600BD1B4C /* MovieAddView.swift in Sources */,
+				07F96D1F29B13E1B00B4F914 /* TabBarView.swift in Sources */,
+				076BB31929B14575002C58AC /* ListRowView.swift in Sources */,
+				07F96D1829B1342400B4F914 /* ListView.swift in Sources */,
+				07F96D1329B1332300B4F914 /* DataController.swift in Sources */,
 				07F5205A29A795D700EF51D8 /* Movona.xcdatamodeld in Sources */,
+				07F96D1B29B1347B00B4F914 /* AddMovieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

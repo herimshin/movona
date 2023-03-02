@@ -9,14 +9,14 @@ import SwiftUI
 
 @main
 struct MovonaApp: App {
-    let persistenceController = PersistenceController.shared
-    @StateObject var movieViewModel: MovieViewModel = MovieViewModel()
+    @StateObject private var dataController = DataController()
 
 
     var body: some Scene {
         WindowGroup {
             TabBarView()
-                .environmentObject(MovieViewModel())
+                .environment(\.managedObjectContext,
+                              dataController.container.viewContext)
         }
     }
 }
