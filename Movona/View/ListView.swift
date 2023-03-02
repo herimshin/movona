@@ -46,8 +46,7 @@ struct ListView: View {
                     
                 }
                     .fullScreenCover(isPresented: $showAddView) {
-                        MovieAddView()
-                        
+                    MovieAddView(movieViewModel: movieViewModel)
                     })
         }
     }
